@@ -1,0 +1,67 @@
+<!--Task 1: Creating a Selection Experience
+
+Now let's add some different selection features to your form to spice things up.
+Include a select menu that allows users to choose their favorite programming language from a list of options.
+Implement a set of radio buttons for users to indicate their level of expertise (beginner, intermediate, advanced).
+Add checkboxes to let users select their preferred development platforms (web, mobile, desktop).
+Expected Outcomes: Students should be able to create a selection experience with select menus, radio buttons, and checkboxes to capture 
+user preferences.
+
+Task 2: Improving Accessibility
+
+Ensure that all form elements have associated labels using the for attribute.
+Implement ARIA attributes to enhance accessibility for users with disabilities.
+Test the form with screen readers to verify that it provides a user-friendly experience.
+Expected Outcomes: Students should be able to enhance the accessibility of the web form by associating labels with form elements and 
+implementing ARIA attributes.-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Web Form Assignment</title>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h1>Task 1</h1>
+        <fieldset>
+            <legend>Language Info</legend>
+            <label for="language">Select Your Fav Language:</label>
+            <select id="language" name="language" required aria-label="Favorite Language">
+                <option value="" disabled selected>Fav Language</option> <!-- I am using this as a form of a placeholder -->
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+            </select>
+            <fieldset>
+
+                <legend>Experience</legend>
+                <input type="radio" id="Beginner" name="experience" value="Beginner" required>
+                <label for="Beginner">Beginner</label>
+
+                <input type="radio" id="intermediate" name="experience" value="intermediate" required>
+                <label for="intermediate">Intermediate</label>
+
+                <input type="radio" id="professional" name="experience" value="professional" required>
+                <label for="professional">Professional</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preffered Platform</legend>
+
+                <input type="checkbox" id="web" name="platform" value="web" required aria-labelledby="web">
+                <label for="web">Web</label>
+
+                <input type="checkbox" id="mobile" name="platform" value="mobile" required aria-labelledby="mobile">
+                <label for="mobile">Mobile</label>
+
+                <input type="checkbox" id="desktop" name="platform" value="desktop" required aria-labelledby="desktop">
+                <label for="desktop">Desktop</label>
+            </fieldset>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>      
